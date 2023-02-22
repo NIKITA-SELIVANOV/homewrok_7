@@ -27,12 +27,19 @@ Console.WriteLine("|");
 }
 }
 void PointAverage (int[,] matrix) {
-   int count = 0;
-    for (int j = 0; j< matrix.GetLength(0); j++){
-    for ( int i = 0;i < matrix.GetLength(1); i++){
-    count += matrix[j,i];   
+Console.Write ("Среднее арфимитические значения столбцов: ");
+   double count = 0;
+    for (int j = 0; j< matrix.GetLength(1); j++){
+    for ( int i = 0;i < matrix.GetLength(0); i++){
+    count += matrix[i,j];   
 }
-Console.WriteLine (count);
+if (j<matrix.GetLength(1)-1){
+Console.Write ($"{Math.Round(count/matrix.GetLength(0),2)}, ");
+}
+else {
+    Console.Write ($"{Math.Round(count/matrix.GetLength(0),2)}");
+}
+
     count = 0;
 }
 }

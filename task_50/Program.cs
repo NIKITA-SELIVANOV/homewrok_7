@@ -2,8 +2,9 @@
 int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количсетво строк матрицы");
 int n = Convert.ToInt32(Console.ReadLine());
-int[,] CreateMatrixRndInt(int min, int max)
-{
+
+int[,] CreateMatrixRndInt(int min, int max){
+
 int[,] matrix = new int[m, n]; // 0, 1
 Random rnd = new Random();
 
@@ -35,11 +36,12 @@ void ChechIndex (int[,] matrix){
     int i= Convert.ToInt32(Console.ReadLine());
      Console.WriteLine ("Введите строку индекса: ");
     int j = Convert.ToInt32(Console.ReadLine());
- if (i>m && j>n)
- Console.WriteLine("Такого индекса нет");
- else
- {
- object c = matrix.GetValue(i,j);
+          if (i>m && j>n){
+            Console.WriteLine("Такого индекса нет");
+}
+        else{
+ 
+ object c = matrix.GetValue(j,i);
  Console.WriteLine(c);
  }
 }
